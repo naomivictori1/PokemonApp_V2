@@ -3,6 +3,7 @@ body {
   background-color: rgb(183, 236, 218);
   font-size: 120%;
   margin: 0;
+  text-align: center;
 }
 
 .navbar {
@@ -52,5 +53,32 @@ button {
   font-family: "Architects Daughter", cursive;
   padding: 0.3rem;
   background-color: white;
+  border-radius: 5px;
+}
+
+
+.pokelist {
+    columns: 2 auto;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
   border-radius: 5px;
 }
