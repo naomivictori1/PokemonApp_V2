@@ -88,3 +88,9 @@ button {
 Link {
   color: #50052e;
 }
+
+.searchbar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}

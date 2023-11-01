@@ -7,6 +7,8 @@ export default function Homepage() {
   const [pokemonlist, setPokemonlist] = useState([]);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [pokemonPerPage] = useState(50);
+  const [filterData, setFilterData] = useState("");
+  const [filteredPokemon, setFilteredPokemon] = useState([]);
 
   useEffect(() => {
     axios
@@ -15,14 +17,23 @@ export default function Homepage() {
       .catch((e) => console.log(e));
   }, []);
 
+  useEffect(() => {
+    const filteredResults = pokemonlist.filter((pokemon) =>
+      pokemon.name.includes(filterData)
+    );
+
+    setFilteredPokemon(filteredResults);
+  }, [pokemonlist, filterData]);
+
   const indexOfLastPokemon = currentPageNumber * pokemonPerPage;
   const indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
-  const currentPokemon = pokemonlist.slice(
+  const currentPokemon = filteredPokemon.slice(
     indexOfFirstPokemon,
     indexOfLastPokemon
   );
 
   const paginate = (pageNumber) => setCurrentPageNumber(pageNumber);
+
   const linkStyle = {
     color: "#053B50",
     textDecoration: "none",
@@ -31,32 +42,35 @@ export default function Homepage() {
     borderRadius: "2rem",
     boxShadow: "0 5px 5px rgba(0, 0, 0, 0.5)",
     padding: "0 1.5rem",
-    // display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     boxSizing: "border-box",
     textAlign: "center",
   };
 
+  const handleFilter = (value) => {
+    setFilterData(value);
+  };
+
   return (
     <>
+      <input
+        placeholder="Search..."
+        className="searchbar"
+        onChange={(e) => handleFilter(e.target.value)}
+      />
       <ul className="pokelist">
-        {currentPokemon.map(
-          (pokemon) => (
-            console.log(pokemon.name),
-            (
-              <h2 key={pokemon.name}>
-                <Link style={linkStyle} to={`/pokemon/${pokemon.name}`}>
-                  {pokemon.name}
-                </Link>
-              </h2>
-            )
-          )
-        )}
+        {currentPokemon.map((pokemon) => (
+          <h2 key={pokemon.name}>
+            <Link style={linkStyle} to={`/pokemon/${pokemon.name}`}>
+              {pokemon.name}
+            </Link>
+          </h2>
+        ))}
       </ul>
       <Pagination
         postsPerPage={pokemonPerPage}
-        totalPosts={pokemonlist.length}
+        totalPosts={filteredPokemon.length}
         paginate={paginate}
       />
     </>
