@@ -21,20 +21,13 @@ body {
   width: 50%;
   min-height: 400px;
   max-width: 400px;
-<<<<<<< HEAD
   background: #ffcc70;
-=======
-  background: white;
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54
   border-radius: 20px;
   box-shadow: 4px 3px 7px 2px #00000040;
   padding: 1rem;
   box-sizing: border-box;
   margin: auto;
-<<<<<<< HEAD
   color: #053b50;
-=======
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54
 }
 
 .img {
@@ -64,7 +57,6 @@ button {
   border-radius: 5px;
 }
 
-<<<<<<< HEAD
 .pokelist {
   columns: 3;
   color: #eeeeee;
@@ -79,36 +71,15 @@ button {
   color: #053b50;
   float: left;
   padding: 4px 8px;
-=======
-
-.pokelist {
-    columns: 2 auto;
-}
-
-.pagination {
-  display: inline-block;
-}
-
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54
   text-decoration: none;
 }
 
 .pagination a.active {
-<<<<<<< HEAD
   color: #eeeeee;
-=======
-  background-color: #4CAF50;
-  color: white;
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54
   border-radius: 5px;
 }
 
 .pagination a:hover:not(.active) {
-<<<<<<< HEAD
   background-color: #176b87;
   border-radius: 5px;
   color: #eeeeee;
@@ -122,9 +93,5 @@ Link {
   position: absolute;
   top: 20px;
   right: 30px;
+  border-radius: 50%;
 }
-=======
-  background-color: #ddd;
-  border-radius: 5px;
-}
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54

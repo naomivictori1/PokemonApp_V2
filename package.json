@@ -10,11 +10,7 @@
     "react-dom": "18.0.0",
     "react-router": "6.3.0",
     "react-router-dom": "6.3.0",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
-=======
-    "react-scripts": "4.0.0",
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54
     "react-spinners": "0.13.4"
   },
   "devDependencies": {
@@ -33,8 +29,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 13476041d737b8270cd9b23015de5cdf779ecc54
