@@ -54,11 +54,17 @@ export default function Homepage() {
 
   return (
     <>
-      <input
-        placeholder="Search..."
-        className="searchbar"
-        onChange={(e) => handleFilter(e.target.value)}
-      />
+      <div className="search-box">
+        <button className="btn-search">
+          <i className="fas fa-search"></i>
+        </button>
+        <input
+          placeholder="Search..."
+          className="input-search"
+          onChange={(e) => handleFilter(e.target.value)}
+        />
+      </div>
+
       <ul className="pokelist">
         {currentPokemon.map((pokemon) => (
           <h2 key={pokemon.name}>

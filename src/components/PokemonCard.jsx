@@ -46,5 +46,3 @@ export default function PokemonSection() {
   );
 }
 
-// <h2>{pokemonid}</h2>
-//<h1>{pokemonDetail.name}</h1>
