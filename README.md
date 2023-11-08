@@ -1,2 +1,3 @@
 # PokemonApp_V2
-Created with CodeSandbox
+
+ Pokedex that shows information when you click or search for a pokemon...
